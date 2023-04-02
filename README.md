@@ -81,7 +81,7 @@ It will be added when the project is completed.
 
 ## 🚀 Live Demo<a name="live-demo"></a>
 
-- [Live Demo Link](It will come when finished the project.)
+- [Live Demo Link](https://feature-2--sparkling-dieffenbachia-24a95b.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
