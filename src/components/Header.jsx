@@ -9,8 +9,11 @@ const Header = () => {
   };
   return (
     <header style={headerStyle} className={styles.header}>
-      <h1>todos</h1>
-      <p>Items will persist in the browser local storage</p>
+      <h1>Add Your To-Do</h1>
+      <p>
+        Using a to-do list can help you stay organized and
+        on track with your tasks and responsibilities.
+      </p>
     </header>
   );
 };

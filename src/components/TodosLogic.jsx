@@ -50,15 +50,15 @@ const TodosLogic = () => {
   };
 
   const setUpdate = (updatedTitle, id) => {
-    setTodos((todos) => todos.map((todo) => {
-      if (todo.id === id) {
-        return {
-          ...todo,
-          title: updatedTitle,
-        };
-      }
-      return todo;
-    }));
+    setTodos(
+      todos.map((todo) => {
+        if (todo.id === id) {
+          // eslint-disable-next-line no-param-reassign
+          todo.title = updatedTitle;
+        }
+        return todo;
+      }),
+    );
   };
 
   return (

@@ -7,6 +7,7 @@ const TodoItem = ({
   itemProp, handleChange, delTodo, setUpdate,
 }) => {
   const [editing, setEditing] = useState(false);
+  const [updateInput, setUpdateInput] = useState(itemProp.title);
   const handleEditing = () => {
     setEditing(true);
   };
@@ -21,6 +22,7 @@ const TodoItem = ({
 
   const handleUpdatedDone = (event) => {
     if (event.key === 'Enter') {
+      setUpdate(updateInput, itemProp.id);
       setEditing(false);
     }
   };
@@ -43,15 +45,15 @@ const TodoItem = ({
         <button type="button" onClick={handleEditing}>Edit</button>
         <button type="button" onClick={() => delTodo(itemProp.id)}>Delete</button>
         <span style={itemProp.completed ? completedStyle : null}>
-          {itemProp.title}
+          {updateInput}
         </span>
       </div>
       <input
         type="text"
-        value={itemProp.title}
+        value={updateInput}
         className={styles.textInput}
         style={editMode}
-        onChange={(e) => setUpdate(e.target.value, itemProp.id)}
+        onChange={(e) => setUpdateInput(e.target.value)}
         onKeyDown={handleUpdatedDone}
       />
     </li>

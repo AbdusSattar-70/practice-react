@@ -3,6 +3,10 @@
   font-weight: 600;
   margin-bottom: 1rem;
   line-height: 1em;
-  text-transform: lowercase;
   text-align: center;
+}
+
+.header p {
+  font-size: 2rem;
+  line-height: normal;
 }
